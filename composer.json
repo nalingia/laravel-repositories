@@ -1,5 +1,5 @@
 {
-    "name": "nalingia/repositories",
+    "name": "nalingia/laravel-repositories",
     "description": "A Laravel package for the Repository Design Pattern.",
     "keywords": [
         "repositories",
