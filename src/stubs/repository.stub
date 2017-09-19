@@ -1,0 +1,18 @@
+<?php
+
+namespace DummyRepositoryBaseNamespace;
+
+use DummyModelNamespace;
+use DummyRepositoryContractNamespace;
+use Nalingia\Repositories\AbstractEloquentRepository;
+
+class DummyClass extends AbstractEloquentRepository implements DummyContract {
+
+  /**
+   * Create a new DummyClass repository instance.
+   * @return void
+   */
+  public function __construct() {
+    $this->_model = new DummyModel;
+  }
+}
