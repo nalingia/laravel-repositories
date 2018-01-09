@@ -1,38 +1,49 @@
 {
-    "name": "nalingia/laravel-repositories",
-    "description": "A Laravel package for the Repository Design Pattern.",
-    "keywords": [
-        "repositories",
-        "design pattern",
-        "orm",
-        "model"
-    ],
-    "type": "library",
-    "require": {
-        "php": "^7.0",
-        "laravel/framework": "~5.2.0",
-        "lstrojny/functional-php": "^1.6"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Gianmarco Nalin",
-            "email": "gianma.nalin89@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Nalingia\\Repositories\\": "src"
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Nalingia\\Repositories\\RepositoriesServiceProvider"
-            ]
-        }
+  "name": "nalingia/laravel-repositories",
+  "description": "A Laravel package for the Repository Design Pattern.",
+  "keywords": [
+    "repositories",
+    "design pattern",
+    "orm",
+    "model"
+  ],
+  "type": "library",
+  "require": {
+    "php": "^7.0",
+    "illuminate/support": "~5.2.0",
+    "illuminate/filesystem": "~5.2.0",
+    "lstrojny/functional-php": "^1.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.2",
+    "orchestra/testbench": "^3.2"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gianmarco Nalin",
+      "email": "gianma.nalin89@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Nalingia\\Repositories\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Nalingia\\Repositories\\Tests\\": "./tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Nalingia\\Repositories\\RepositoriesServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable"
 }
