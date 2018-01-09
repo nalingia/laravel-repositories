@@ -85,11 +85,13 @@ php artisan vendor:publish --provider="Nalingia\Repositories\RepositoriesService
 
 
 ## Change log
-Please, see CHANGELOG for more information about what has changed recently.
+Please, see [CHANGELOG](CHANGELOG.md) for more information about what has changed recently.
 
 ## Contributing
-Please, see CONTRIBUTING for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Testing
+Coming soon!
 
 ## License
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
