@@ -10,9 +10,11 @@ class DummyClass extends AbstractEloquentRepository implements DummyContract {
 
   /**
    * Create a new DummyClass repository instance.
+   *
+   * @param \DummyModelNamespace $model
    * @return void
    */
-  public function __construct() {
-    $this->_model = new DummyModel;
+  public function __construct(DummyModel $model) {
+    $this->_model = $model;
   }
 }
