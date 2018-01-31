@@ -8,7 +8,9 @@ use \InvalidArgumentException;
 
 abstract class AbstractEloquentRepository {
   /**
-   * @var Model
+   * Model instance.
+   *
+   * @var \Illuminate\Database\Eloquent\Model
    */
   protected $_model;
 
@@ -43,7 +45,7 @@ abstract class AbstractEloquentRepository {
    * @param array $with
    * @param string $comparator
    * @param bool $fail
-   * @return Model|null|static
+   * @return \Illuminate\Database\Eloquent\Model|null|static
    */
   public function getFirstBy($key, $value, array $with = [], $comparator = '=', $fail = false) {
     $q = $this->_model->with($with)->where($key, $comparator, $value);
@@ -69,7 +71,7 @@ abstract class AbstractEloquentRepository {
    * @param $where
    * @param array $with
    * @param bool $fail
-   * @return Model|null|static
+   * @return \Illuminate\Database\Eloquent\Model|null|static
    */
   public function getFirstWhere(array $where, $with = [], $fail = false) {
     $q = $this->_model->with($with)->where($where);
@@ -94,7 +96,7 @@ abstract class AbstractEloquentRepository {
    * @param int $page
    * @param int $limit
    * @param array $with
-   * @return StdClass object with $items and $totalCount for pagination.
+   * @return \StdClass object with $items and $totalCount for pagination.
    */
   public function getByPage($page = 1, $limit = 10, array $with = []) {
     $result = new StdClass;
@@ -117,7 +119,7 @@ abstract class AbstractEloquentRepository {
    * Creates a new $model instance.
    *
    * @param array $data
-   * @return mixed
+   * @return \Illuminate\Database\Eloquent\Model
    */
   public function create(array $data) {
     return $this->_model->create($data);
@@ -129,7 +131,6 @@ abstract class AbstractEloquentRepository {
    * @param \Illuminate\Database\Eloquent\Model $model
    * @param array $data
    * @return \Illuminate\Database\Eloquent\Model|bool
-   *
    * @throws \InvalidArgumentException
    */
   public function update($model, array $data) {
@@ -151,6 +152,8 @@ abstract class AbstractEloquentRepository {
    *
    * @param \Illuminate\Database\Eloquent\Model $model
    * @return bool
+   * @throws \InvalidArgumentException
+   * @throws \Exception
    */
   public function delete($model) {
     $repositoryClass = get_class($this->_model);
@@ -165,9 +168,9 @@ abstract class AbstractEloquentRepository {
   /**
    * Truncates $model's table.
    *
-   * @return mixed
+   * @return void
    */
   public function truncate() {
-    return $this->_model->truncate();
+    $this->_model->truncate();
   }
 }
