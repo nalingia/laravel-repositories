@@ -19,7 +19,7 @@ class RepositoryMakeCommand extends Command {
    *
    * @var string
    */
-  protected $description = 'Create a new repository file.';
+  protected $description = 'Create a new repository class';
 
   /**
    * The repository creator instance.
@@ -46,7 +46,7 @@ class RepositoryMakeCommand extends Command {
    *
    * @return void
    */
-  public function fire() {
+  public function handle() {
     $model = trim($this->input->getArgument('model'));
 
     $this->writeRepository($model);
