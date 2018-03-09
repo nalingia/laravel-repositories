@@ -5,6 +5,8 @@ namespace Nalingia\Repositories;
 use Illuminate\Database\Eloquent\Model;
 use \StdClass;
 use \InvalidArgumentException;
+use \BadMethodCallException;
+use Illuminate\Support\Str;
 
 abstract class AbstractEloquentRepository {
   /**
@@ -172,5 +174,37 @@ abstract class AbstractEloquentRepository {
    */
   public function truncate() {
     $this->_model->truncate();
+  }
+
+  /**
+   * Handle dynamic method call on repository.
+   *
+   * @param string $method
+   * @param array $arguments
+   * @return mixed
+   */
+  public function __call($method, $arguments) {
+    if (preg_match('/getAllWhere([A-Za-z0-9]+)In/', $method, $matches)) {
+      $column = Str::snake($matches[1]);
+      return $this->getAllWhereAttributeIn($column, ...$arguments);
+    }
+
+    $className = static::class;
+    throw new BadMethodCallException("Call to undefined method {$className}::{$method}()");
+  }
+
+  /**
+   * Private method used when dynamic method call matches In requests.
+   *
+   * @param string $column
+   * @param array $needles
+   * @param array $with
+   * @return \Illuminate\Database\Eloquent\Collection
+   */
+  private function getAllWhereAttributeIn($column, array $needles, array $with = []) {
+    return $this->_model
+      ->with($with)
+      ->whereIn($column, $needles)
+      ->get();
   }
 }

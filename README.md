@@ -74,6 +74,10 @@ public function delete($model);
 ```php
 public function truncate();
 ```
+* Get all models having ```column_name``` in ```$needles```:
+```php
+public function getAllWhereColumnNameIn(array $needles, array $with = []);
+```
 
 You can contribute to the common methods by proposing a pull request.
 ### Settings
