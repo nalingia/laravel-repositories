@@ -8,6 +8,7 @@ php:
 before_script:
   - travis_retry composer self-update
   - travis_retry composer install --prefer-dist
+  - travis_retry composer dump-autoload -o
 
 script:
   composer test
