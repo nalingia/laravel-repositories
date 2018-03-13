@@ -1,5 +1,11 @@
 A Laravel package for the Repository design pattern
 =======================
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/nalingia/laravel-repositories.svg?style=flat-square)](https://packagist.org/packages/nalingia/laravel-repositories)
+[![Build Status](https://travis-ci.org/nalingia/laravel-repositories.svg?branch=master)](https://travis-ci.org/nalingia/laravel-repositories)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/nalingia/laravel-repositories.svg?style=flat-square)](https://packagist.org/packages/nalingia/laravel-repositories)
+
 Repositories is a simple package to simplify the creation of scaffolding code when using the [Repository Design Pattern](https://msdn.microsoft.com/en-us/library/ff649690.aspx).
 It adds an artisan command which creates the repository and the related contract.
 ## Installation
