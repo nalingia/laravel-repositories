@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.0 - 2018/03/13
+- Added test suite.
+
 ## 1.2.0 - 2018/03/09
 - Added ```getAllWhere<ColumnName>In``` method.
 
