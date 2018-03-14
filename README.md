@@ -101,7 +101,14 @@ Please, see [CHANGELOG](CHANGELOG.md) for more information about what has change
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Testing
-Coming soon!
+You can run the tests with:
+```php
+composer test
+```
+or
+```php
+vendor/bin/phpunit
+``` 
 
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
