@@ -11,7 +11,7 @@ It adds an artisan command which creates the repository and the related contract
 ## Installation
 You can install the package via composer:
 ```bash
-composer require nalingia/repositories
+composer require nalingia/laravel-repositories
 ```
 
 Then you have to add the related Service Provider to the `providers` configuration array in `config/app.php`:

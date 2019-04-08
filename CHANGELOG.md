@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.1 - 2019/04/08
+- Fix wrong installation command on README.
+
+## 1.4.0 - 2019/04/08
+- Add support for Laravel 5.7 and 5.8.
+- Drop support for PHP 7.1.
+
 ## 1.3.0 - 2018/03/13
 - Added test suite.
 
