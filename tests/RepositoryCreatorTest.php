@@ -41,7 +41,7 @@ class RepositoryCreatorTest extends TestCase {
     'pluralise' => true,
   ];
 
-  public function setUp() {
+  protected function setUp() {
     parent::setUp();
 
     $this->deleteDirectory($this->_basePath);
