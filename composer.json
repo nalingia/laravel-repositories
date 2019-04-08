@@ -32,7 +32,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Nalingia\\Repositories\\Tests\\": "./tests"
+      "Nalingia\\Repositories\\Tests\\": "./tests",
+      "Nalingia\\Repositories\\Tests\\Models\\": "./tests"
     }
   },
   "scripts": {
