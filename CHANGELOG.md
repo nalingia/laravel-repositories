@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.0 2019/09/10
+- Added Laravel 6.0 compatibility.
+
 ## 1.4.1 - 2019/04/08
 - Fix wrong installation command on README.
 
